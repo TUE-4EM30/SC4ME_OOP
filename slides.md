@@ -37,7 +37,7 @@ layout: center
 class: red-background
 ---
 
-# Encapsulation, polymorphism, and magic methods
+# Encapsulation & Polymorphism
 
 ---
 src: ./slides/epm.md

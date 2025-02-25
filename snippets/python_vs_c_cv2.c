@@ -1,16 +1,18 @@
-class MyObject {
+#include <iostream>
 
-public: // all that follows is public
+class MyObject{
 
-MyObject( int arg ) {
-    myprop = arg;
-}
+  public: // all that follows is public
 
-void printme() {
-    cout << myprop;
-}
+    MyObject(int arg){
+      myprop = arg;
+    }
 
-private: // all that follows is private
+    void printme(){
+      std::cout << myprop;
+    }
 
-int myprop;
-}
+  private: // all that follows is private
+
+    int myprop;
+};

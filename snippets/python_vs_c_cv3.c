@@ -1,17 +1,18 @@
-class MyObject {
-    void MyObject( int arg ) {
-        myprop = arg;
-    }
-    // equals (a == b) as method
-    MyObject operator==(const MyObject& other) {
-        return myprop == other.myprop;
-    }
+class MyObject{
+  void MyObject(int arg){
+    myprop = arg;
+  }
     
-    int myprop;
-    }
+  // equals (a == b) as method
+  MyObject operator==(const MyObject& other){
+    return myprop==other.myprop;
+  }
     
-    // addition (a + b) as external function
-    MyObject operator+( const MyObject& a, const
-        MyObject& b ) {
-        return MyObject( a.myprop + b.myprop );
-    }
+  int myprop;
+};
+    
+// addition (a + b) as external function
+MyObject operator+(const MyObject& a,
+                   const MyObject& b ){
+  return MyObject(a.myprop + b.myprop);
+};

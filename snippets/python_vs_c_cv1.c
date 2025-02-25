@@ -1,14 +1,17 @@
-class MyObject {
+#include <iostream>
 
-// constructor
-void MyObject( int arg ) {
+class MyObject{
+ 
+  // constructor
+  MyObject(int arg){
     myprop = arg;
-}
+  }
 
-// method
-void printme() {
-    cout << myprop;
-}
+  // method
+  void printme(){
+    std::cout << myprop;
+  }
 
-// attribute
-int myprop;
+  // attribute
+  int myprop;
+};

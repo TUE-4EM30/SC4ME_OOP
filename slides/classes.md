@@ -1,36 +1,31 @@
 ---
 layout: two-cols
-class: large-python-motion
 ---
 
-## Classes & objects
+## Classes & Objects
 
-A class defines the template based on which an object (or instance) is constructed.
-
-<br>
+#### &nbsp;
+### A **class** defines the template from which an **object** (instance) is constructed.
 
 <v-click>
 
-- Attributes are variables that store data related to the object. They define the state of an object.
-
+- An object is created using the `__init__` magic method, know as the constructor.
 </v-click>
 <v-click>
 
-- Methods are functions inside a class that define what an object can do.
-
-</v-click>
-
-<br>
-
-<v-click>
-
-- The initial Attibutes can also be altered in the main code.
-
+- Attributes store data related to the object in `self`. They define the state of an object.
 </v-click>
 <v-click>
 
-- The Class can be expended to contain all information needed.
+- Methods are functions in a class that define what an object can do. They normally take `self` as the first argument.
+</v-click>
+<v-click>
 
+- Attributes and functions can be accessed through the instance.
+</v-click>
+<v-click>
+
+- Objects can create complex data types with accompanying methods.
 </v-click>
 
 ::right::
@@ -39,44 +34,27 @@ A class defines the template based on which an object (or instance) is construct
 
 ````md magic-move {at:1}
 <<< @/snippets/classes_v1.py python 
+<<< @/snippets/classes_v1.py python {2}
 <<< @/snippets/classes_v1.py python {2,3}
 <<< @/snippets/classes_v1.py python {5,6}
 <<< @/snippets/classes_v2.py python {8,9,14-18}
 <<< @/snippets/classes_v3.py python {2-4,6-8,13,14,19,20}
 ````
 
----
+--- 
 layout: two-cols
-class: large-python-motion
 ---
 
-## Classes & objects
+## Python *vs.* C++
+#### &nbsp;
+### Python
 
-
-
-<v-click>
-
-Delegation: Passing tasks to another class
-
-</v-click>
-<v-click>
-
-Composition: Using an object as part of another object
-
-</v-click>
-<v-click>
-
-Extension: Creating new behavior by subclassing
-
-</v-click>
+<<< @/snippets/python_vs_c_pv1.py python
 
 ::right::
 
-&nbsp;
+## &nbsp;
+#### &nbsp;
+### C++
 
-````md magic-move {at:1}
-<<< @/snippets/DRY_v0.py python
-<<< @/snippets/classes_v7.py python
-<<< @/snippets/classes_v8.py python 
-<<< @/snippets/classes_v9.py python 
-````
+<<< @/snippets/python_vs_c_cv1.c cpp

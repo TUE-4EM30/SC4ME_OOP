@@ -1,29 +1,7 @@
-.two-columns {
+.two-columns, .two-cols-header {
     display: flex;
     gap: 20px; /* Adjust the gap as needed */
 }
-
-/* Increase font size for all normal text */
-li {
-    font-size: 1.1em;
-}
-
-/* Increase font size for all normal text */
-.line, .slidev-code-highlighted {
-    font-size: 1.2em;
-}
-
-
-.large-python-slide pre code {
-    font-size: 0.75em !important; /* Adjust the size as needed */
-    line-height: 0.6 !important;
-  }
-
-
-.large-python-motion span {
-    font-size: 0.9em !important; /* Adjust the size as needed */
-    line-height: 0.6 !important;
-  }
 
 .red-background {
     color: white;

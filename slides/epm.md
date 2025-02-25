@@ -3,118 +3,114 @@ layout: two-cols
 class: large-python-motion
 ---
 
-## Data protection - Encapsulation 
+## Encapsulation 
 
-Encapsulation is implemented by making attributes private, i.e., by hiding them. Some
-languages do this by explicit type declarations (C++), others by naming conventions
-(Python).
+#### &nbsp;
+### Attributes can be made private to hide and protect them.
 
-Encapsulation allows the program developer to focus on what an object does, without
-being concerned by how it is done exactly.
+<v-click>
+
+- Python does this by adding two leading underscores to an attribute name.
+</v-click>
+<v-click>
+
+- Allows the object developer to ensure conditions through `asserts`.
+</v-click>
+
+<v-click>
+
+- Encapsulation allows object users to focus on what an object does, without
+being concerned by how it is done.
+- Although the programmer should be aware of the object's behavior (complexity).
+</v-click>
+
+<!-- Some languages do this by explicit type declarations (C++), others by naming convention -->
+<!-- (Python). -->
 
 ::right::
 
 &nbsp;
 
-````md magic-move
+````md magic-move {at:1}
 <<< @/snippets/classes_v2.py python 
 <<< @/snippets/classes_v4_1.py python {3,9-11}
 <<< @/snippets/classes_v4.py python {4,16-20}
 ````
 
 ---
-layout: two-cols
-class: large-python-motion
+layout: two-cols-header
 ---
 
-## Data protection - Encapsulation 
+## Why use encapsulation?
 
-Technical advantages:
+::left::
 
-<v-click>
-
-- Object refactoring: Objects can be improved, both in terms of internal data structures and method implementations, without changing its interface.
-
-</v-click>
-<v-click>
-
-- Code robustness: The risk of unexpected behavior by unintended manipulation of data is minimized by shielding internal data.
-
-</v-click>
-<v-click>
-
-- Verification: The object’s interface defines the functionality to be tested.
-
-</v-click>
+````md magic-move
+<<< @/snippets/classes_v4.py python
+<<< @/snippets/classes_v4.py python {11,12,16-19}
+<<< @/snippets/classes_v4.py python {6,10,15}
+````
 
 ::right::
 
-&nbsp;
+- **Object refactoring ➡** Objects can be improved - both in terms of internal data structures and method implementations - without changing its interface.
+<v-click at=1>
 
-````md magic-move {at:2}
-<<< @/snippets/classes_v4.py python {3,4,13,20}
-<<< @/snippets/classes_v4.py python {11,12,16-19}
-<<< @/snippets/classes_v4.py python {10,15}
-````
+- **Code robustness ➡** The risk of unexpected behavior by unintended manipulation of data is minimized by shielding internal data.
+</v-click>
+<v-click  at=2>
+
+- **Verification ➡** The object’s interface defines the functionality to be tested.
+</v-click>
 
 --- 
 layout: two-cols
-class: large-python-motion
 ---
 
-## Python vs C++ | Encapsulation
+## Python *vs.* C++ | Encapsulation
+#### &nbsp;
+### Python *(naming convention)*
 
-<br>
-
-### Python
-
-````md magic-move {at:1}
-<<< @/snippets/python_vs_c_pv1.py python
+````md magic-move
 <<< @/snippets/python_vs_c_pv2.py python
 ````
 
-- Private by name convention: two leading underscores
-
 ::right::
 
-&nbsp;
+## &nbsp;
+#### &nbsp;
+### C++ *(public/private keywords)*
 
-### C++
-
-````md magic-move {at:1}
-<<< @/snippets/python_vs_c_cv1.c c 
-<<< @/snippets/python_vs_c_cv2.c c 
+````md magic-move
+<<< @/snippets/python_vs_c_cv2.c cpp 
 ````
-
-- Public/private by keyword
 
 ---
 layout: two-cols
 class: large-python-motion
 ---
 
-## Operator overloading - Polymorphism
+## Polymorphism
+#### &nbsp;
+### The behavior of a function or operator depends on the object it is applied to and/or its arguments (overloading)
 
-A function or operator can be applied to objects of different types. Its behavior depends on the type of argument(s).
+- Argument-dependent implementation
 
-Polymorphism is implemented by provision of special methods (so-called Magic Methods in Python )
+<v-click>
 
-````md magic-move {at:1}
-<<< @/snippets/epm_v1.py python
-<<< @/snippets/epm_v1.py python {6}
-<<< @/snippets/epm_v1.py python {6}
-<<< @/snippets/epm_v1.py python {6}
-<<< @/snippets/epm_v1.py python {6}
-````
+- Magic methods define built-in methods and operators
+    - Constructor: `__init__`
+    - String representation: `__repr__`
+    - Function call: `__call__`
+    - Length function: `__len__`
+</v-click>
 
 ::right::
 
 &nbsp;
 
 ````md magic-move {at:1}
-<<< @/snippets/DRY_v0.py python 
-<<< @/snippets/classes_v2.py python
-<<< @/snippets/classes_v2.py python {5,6,17,18}
+<<< @/snippets/classes_v10.py python {8-12}
 <<< @/snippets/classes_v5.py python {5,6,8,9,18,19,21,22}
 <<< @/snippets/classes_v6.py python
 ````
@@ -124,30 +120,20 @@ layout: two-cols
 class: large-python-motion
 ---
 
-## Python vs C++ | Polymorphism
+## Python *vs.* C++ | Polymorphism
+#### &nbsp;
+### Python *(magic method)*
 
-<br>
-
-### Python
-
-````md magic-move {at:1}
-<<< @/snippets/python_vs_c_pv2.py python
+````md magic-move
 <<< @/snippets/python_vs_c_pv3.py python
 ````
 
-- Operator as method
-
 ::right::
 
-&nbsp;
+## &nbsp;
+#### &nbsp;
+### C++ *(method or external function)*
 
-### C++
-
-````md magic-move {at:1}
-<<< @/snippets/python_vs_c_cv2.c c
-<<< @/snippets/python_vs_c_cv3.c c 
+````md magic-move
+<<< @/snippets/python_vs_c_cv3.c cpp
 ````
-
-- Operator as method or external function
-
-

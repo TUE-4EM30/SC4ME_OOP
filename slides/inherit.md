@@ -1,3 +1,39 @@
+
+---
+layout: two-cols
+---
+
+## Classes & Objects
+
+
+
+<v-click>
+
+Delegation: Passing tasks to another class
+
+</v-click>
+<v-click>
+
+Composition: Using an object as part of another object
+
+</v-click>
+<v-click>
+
+Extension: Creating new behavior by subclassing
+
+</v-click>
+
+::right::
+
+&nbsp;
+
+````md magic-move {at:1}
+<<< @/snippets/DRY_v0.py python
+<<< @/snippets/classes_v7.py python
+<<< @/snippets/classes_v8.py python 
+<<< @/snippets/classes_v9.py python 
+````
+
 ---
 layout: two-cols
 class: large-python-motion
