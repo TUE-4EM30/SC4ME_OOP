@@ -30,7 +30,7 @@ class: red-background
 src: ./slides/classes.md
 ---
 
-<!-- slides imported from python.md -->
+<!-- slides imported from classes.md -->
 
 ---
 layout: center
@@ -43,7 +43,7 @@ class: red-background
 src: ./slides/epm.md
 ---
 
-<!-- slides imported from oop.md -->
+<!-- slides imported from epm.md -->
 
 ---
 layout: center
@@ -56,12 +56,32 @@ class: red-background
 src: ./slides/inherit.md
 ---
 
-<!-- slides imported from oop.md -->
+<!-- slides imported from inherit.md -->
 
 ---
 layout: center
 class: red-background
 ---
 
-# Assignment
+# Introduction to Assignment II
 
+---
+src: ./slides/assignment.md
+---
+
+<!-- slides imported from assignment.md -->
+
+# The questions
+
+---
+src: ./slides/questions.md
+---
+
+<!-- slides imported from questions.md -->
+
+---
+layout: center
+class: red-background
+---
+
+# Branching in Git and Gitlab

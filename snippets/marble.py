@@ -1,23 +1,23 @@
 import math
 
 class Marble:
-    def __init__(self, radius, material, id=None):
-        self.radius = radius
-        self.material = material
-        self.id = id
+  def __init__(self, radius, material, id=None):
+    self.radius = radius
+    self.material = material
+    self.id = id
 
-    def volume(self):
-        return 4/3*math.pi*self.radius**3
-    
-    def is_magnetic(self):
-        return self.material.magnetic
-    
-    def mass(self):
-        return self.volume()*self.material.density
-    
-    def get_serie_number(self):
-        return self.id
-    
+  def volume(self):
+    return 4 / 3 * math.pi * self.radius ** 3
+  
+  def is_magnetic(self):
+    return self.material['magnetic']
+  
+  def mass(self):
+    return self.volume() * self.material['density']
+  
+  def get_serie_number(self):
+    return self.id
+  
 glass = {'density': 2.5, 'magnetic': False}
 steel = {'density': 8.05, 'magnetic': True}
 

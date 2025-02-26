@@ -1,0 +1,24 @@
+TUEvolution/
+│
+├── README.md
+├── setup.py
+├── requirements.txt
+├── TUEvolution/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── map.py
+│   ├── creatures.py
+│   ├── graphs.py
+│   └── ...
+│
+├── scenarios/
+│   ├── default.toml
+│   ├── question1.toml
+│   └── ...
+|
+├── tests/
+│   ├── __init__.py
+│   ├── test_creatures.py
+│   └── ...
+│
+└── ...

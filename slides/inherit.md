@@ -68,7 +68,7 @@ layout: two-cols
 Inheritance is useful when:
 - There exists an 'is a type of' relationship between objects.
 - There is more than one child.
-- Each child should expose the full parent (public) interface
+- Each child should expose the full parent (public) interface.
 
 <v-click>
 
