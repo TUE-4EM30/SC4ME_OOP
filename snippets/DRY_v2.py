@@ -1,24 +1,22 @@
+import math
+
+class Shape: 
+  def __init__(self, color):
+    self.color = color
+
+  def tell_color(self):
+    return f'This is a {self.color} shape.'
+
 class Circle(Shape):  
-    def __init__(self, color, radius):
-        super().__init__(color)
-        self.radius = radius
+  def __init__(self, color, radius):
+    super().__init__(color)
+    self.radius = radius
 
-    def area(self):
-        return 3.14 * self.radius ** 2
+  def area(self):
+    return math.pi*self.radius**2
+  
+  # create a circle
+  red_circle = Circle('red', 5)
 
-    def describe(self):
-        return f"This is a {self.color} circle 
-                with radius {self.radius}."
-
-class Rectangle(Shape):
-    def __init__(self, color, width, height):
-        super().__init__(color)  
-        self.width = width
-        self.height = height
-
-    def area(self):
-        return self.width * self.height
-
-    def describe(self):
-        return f"This is a {self.color} rectangle with
-                width {self.width} and height {self.height}."
+  # print the color of the circle
+  print(red_circle.tell_color())

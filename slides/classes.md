@@ -41,6 +41,39 @@ layout: two-cols
 <<< @/snippets/classes_v3.py python {2-4,6-8,13,14,19,20}
 ````
 
+---
+layout: two-cols
+---
+
+## Composition
+
+<<< @/snippets/marble.py py {21-25|3-7|9-13|15-16|18-19}
+
+::right::
+
+## &nbsp;
+
+### A class is *composed* of one or more objects, thereby creating a complex type. Composition represents a "has a" relationship.
+
+- A marble has a *radius* (of type `float`) and a *material* (of type `dict`).
+
+<v-click at=1>
+
+- Data stored internally in `self`, which is different for the two marble objects.
+</v-click>
+<v-click at=2>
+
+- A method can *delegate* its task to one of the objects it is composed of.
+</v-click>
+<v-click at=3>
+
+- A method can be *composed* using multiple of the objects it is composed of.
+</v-click>
+<v-click at=4>
+
+- A method can be *extended* with functionality unrelated to the objects it is composed of.
+</v-click>
+
 --- 
 layout: two-cols
 ---
