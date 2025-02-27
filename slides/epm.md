@@ -98,11 +98,12 @@ class: large-python-motion
 
 <v-click>
 
-- Magic methods define built-in methods and operators
+- Magic methods define built-in methods and operators:
     - Constructor: `__init__`
     - String representation: `__repr__`
     - Function call: `__call__`
     - Length function: `__len__`
+    - ...
 </v-click>
 
 ::right::

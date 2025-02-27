@@ -7,7 +7,7 @@ class: red-background
 ---
 
 #  Scientific Computing for Mechanical Engineering
-##  Object-Oriented Programming
+##  Making an OOP code
 
 ---
 src: ./slides/intro.md

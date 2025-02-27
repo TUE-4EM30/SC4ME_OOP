@@ -4,6 +4,7 @@ class Creature:
   def __init__(self, radius, speed, stamina, color):
     """
     Initialize a Creature object.
+    """
     ⋮
   ⋮  
   def reproduce(self):
@@ -16,5 +17,6 @@ class Creature:
     Δradius = 0
     Δspeed = 0
 
-    return Creature(self.radius+Δradius, (self.speed+Δspeed), self.stamina, self.color)
+    return Creature(self.radius+Δradius, \
+      self.speed+Δspeed, self.stamina, self.color)
   ⋮

@@ -18,6 +18,7 @@ layout: two-cols-header
     - Increase by 1 with probability $\frac{1}{4}$
     - Decrease by 1 with probability $\frac{1}{4}$
 - The size and speed are independent random variables.
+- Larger creatures will eat smaller creatures.
 
 ---
 layout: two-cols
@@ -54,12 +55,21 @@ layout: two-cols
 ## Question 1 (cont'd)
 #### &nbsp;
 Tips:
-- Study the general structure of the code
+- Study the general structure of the code.
+
+<v-click at=2>
+
 - Change `main.py` to:
-    - Process new scenario file
-    - Instantiate creatures accordingly
+    - Process new scenario file.
+    - Instantiate creatures accordingly.
+</v-click>
+
+<v-click at=3>
+
 - Change `creatures.py` to:
-    - Implement mutations
+    - Implement the size and speed mutations.
+    - Use the `numpy.random` module.
+</v-click>
 
 ::right::
 
@@ -75,18 +85,18 @@ layout: two-cols-header
 
 ## Question 2
 #### &nbsp;
-### Add a histogram plot for both the size distribution and the speed distribution, which updates every 'generation' and is available through the graph cycler.
+### Add two histogram plots showing the size and speed distributions.
 
 ::left::
 <!-- misschien een toevoegen met de gevraagde historgram? -->
 <div class="flex justify-center">
-  <img src="/images/graphcycler.png" alt="graphcycler" >
+  <img src="/images/histogram.png" alt="histogram" >
 </div>
 
 ::right::
 
-- Just included size and speed distributions
-- Desire to visualize those distributions over the generations
+- When mutations take place, one wants to inspect how these are distributed and how these distributions change over the generations.
+- Histograms can be used to visualize these distributions.
 
 ---
 layout: two-cols
@@ -94,42 +104,23 @@ layout: two-cols
 
 ## Question 2 (cont'd)
 
-- Approach:
-    - Create the histograms
-    - Include the histograms into the graph cycler
-
-<br>
+- Approach & tips:
+  - Study the `XY` class in `graphs.py` for inspiration.
+  - Develop a `Histogram` class which has the required functionality.
+  - Include the histograms in the graph cycler.
 
 <v-click at=2>
 
 - Requirements:
-    - The histograms should be updated every "generation" and be available through the graph cycler.
-    - The histograms should work for both `deafult.toml` and `question1.toml`.
-    - All previously stated requirements should still hold.
-
+    - The histograms should be updated every generation.
+    - The histograms should be available through the graph cycler.
+    - The histograms should work properly for both `default.toml` and `question1.toml`.
+    - All previously stated requirements should be met.
 </v-click>
 
 ::right::
 
-<<<@/snippets/main_v4.py {*}{lines:false}
-
----
-layout: two-cols
----
-
-## Question 2 (cont'd)
-#### &nbsp;
-Tips:
-- Study the general structure of the code
-- Change `graphs.py` to:
-    - Create a histogram `class`
-- Change `main.py` to:
-    - Include the histograms into the graph cycler
-
-::right::
-
-````md magic-move
-<<<@/snippets/structure.txt {*|8,11}{lines:false}
+````md magic-move {at:1}
 <<<@/snippets/graphs_v1.py {*}{lines:false}
 <<<@/snippets/graphs_v2.py {*}{lines:false}
 <<<@/snippets/main_v4.py {*}{lines:false}
@@ -141,16 +132,16 @@ layout: two-cols-header
 
 ## Question 3
 #### &nbsp;
-### Implement a "sense" trait for the creature.
+### Implement a *sense* trait for the creature.
 
 ::left::
 
- - Based on the youtube video on the slides. Implement a "sense" trait for the creature. 
- - Explain the reasoning behind your implementation.
- - Design a `question3.toml` scenario that shows an interesting simulation to demonstrate this trait. 
- - Make sure the "sense" circle is visualized in the simulation. 
+- A creature can sense its surrounding in a (mutating) radius.
+- The creature responds to the sense:
+    - Goes directly to food.
+    - Runs away from too large creatures (predators).
+- The energy required to sense scales with the sensing radius.
 
- 
 ::right::
 
 <!-- misschien een toevoegen met de circles on the creatures heen? -->
@@ -165,27 +156,25 @@ layout: two-cols
 ## Question 3 (cont'd)
 
 - Approach:
-    - Implement the "sense" trait.
-    - Vizualize the "sense" trait.
-    - Tweek the parameters and design a 'question3.tolm` scenario that shows an interesting simulation to demonstrate this trait.
-    
-<v-click at=2>
-
-- Requirements:
-    - Like the size and speed traits, the sense treat should also be configurable through the `toml` file.
-    - All previously stated requirements should still hold.
-</v-click>
+    - Implement the sense trait.
+    - Visualize the sense radius per creature in the simulation.
+    - Design a `question3.tolm` scenario that demonstrate the sense trait.
+    - Explain the reasoning behind your implementation in the report.
 
 ::right::
 
+## &nbsp;
+
+- Requirements:
+    - Like the size and speed traits, the sense trait should be configurable through the `toml` scenario file.
+    - The `default.toml` and `question1.toml` scripts should not be altered and should continue to run.
+    - All previously stated requirements still hold.
 
 ---
 
 ## Submission instructions
 
-- Rubric
-- Report
-- Gitlab
-
-
-<!-- Current code does not consider mutations. -->
+- The following deliverables are due on **Friday March 21, 2025, 18:00**:
+    - All **source code** must be developed in your team’s Gitlab repository. After the due date a snapshot of your repository will be taken. The latest push to the Gitlab repository main branch before the deadline will be assessed.
+    - Provide a short report discussing the reasoning behind your solutions to the questions. Include relevant code snippets and screenshots if needed. Indicate your names, student numbers, and team number on the report. The report must be uploaded on Canvas (in pdf-file format) no later than the due date.
+- Carefully read the Canvas rubric that accompanies the assignment.
