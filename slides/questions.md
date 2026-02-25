@@ -1,180 +1,103 @@
 ---
-layout: two-cols-header
+layout: default
 ---
 
-## Question 1
-#### &nbsp;
-### Extent the code with size and speed mutations, such that the `question1.toml` scenario can be simulated.
+## Question 1: Engineering model analysis
 
-::left::
+You first perform the engineering model analysis for the battery and controller.
 
-<<<@/snippets/question1.toml toml {*}{lines:false}
+**Tasks:**
+- Study the documentation of the battery model the controller model — Understand the mathematical equations and physical/logical relationships
+- Identify constraints — From the equations and physical laws, extract bounds, relationships, logical rules, and invariants
 
-::right::
-
-- When a creature reproduces, there is a chance for mutations to take place.
-- The size and speed of a child relative to that of its parent will:
-    - Stay the same with probability $\frac{1}{2}$
-    - Increase by 1 with probability $\frac{1}{4}$
-    - Decrease by 1 with probability $\frac{1}{4}$
-- The size and speed are independent random variables.
-- Larger creatures will eat smaller creatures.
+**Deliverables:**
+- Complete the **constraints tables** in each model documentation section. For each constraint, document:
+  - The constraint statement (mathematical or logical)
+  - Physical or logical justification
+  - Relevant parameters and bounds
 
 ---
-layout: two-cols
+layout: default
 ---
 
-## Question 1 (cont'd)
+## Question 2: Battery module implementation
 
-- Approach:
-    - Change the `scenario` in the `main.py` file to `question1`.
-    - Modify the code to attain the required behavior.
+Construct a fully functioning and tested battery module using your engineering analysis as the foundation.
 
-<br>
+**Tasks:**
+- Design and implement `battery.py`:
+  - Define classes with appropriate attributes and methods
+  - Implement functions specific to the battery module
+  - Ensure each component respects the constraints from your analysis
 
-<v-click at=2>
+- Develop comprehensive unit tests following the three-step test development approach
 
-- Requirements:
-    - The `default.toml` and `question1.toml` files may not be changed.
-    - The modified code must still run - and give the same results - for the `default.toml`.
-    - The different scenarios should be runable by changing the `scenario` in `main.py` only.
-</v-click>
-
-::right::
-
-````md magic-move {at:1}
-<<<@/snippets/main_v0.py py {7}{lines:false}
-<<<@/snippets/main_v2.py py {7}{lines:false}
-<<<@/snippets/main_v2.py py {*}{lines:false}
-````
+**Deliverables:**
+- **(Step 1)** — Completion of a **test overview table** in the testing documentation of the battery
+- **(Step 2)** — Fully documented unit tests in `tests/test_battery.py` following the AAA paradigm
+- **(Step 3)** — Completion of a **coverage overview table** in the testing documentation
 
 ---
-layout: two-cols
+layout: default
 ---
 
-## Question 1 (cont'd)
-#### &nbsp;
-Tips:
-- Study the general structure of the code.
+## Question 3: Controller module implementation
 
-<v-click at=2>
+Construct a fully functioning and tested controller module using your engineering analysis as the foundation.
 
-- Change `main.py` to:
-    - Process new scenario file.
-    - Instantiate creatures accordingly.
-</v-click>
+**Tasks:**
+- Design and implement `controller.py`:
+  - Define classes with appropriate attributes and methods
+  - Implement functions specific to the controller module
+  - Ensure each component respects the constraints from your analysis
 
-<v-click at=3>
+- Develop comprehensive unit tests following the three-step test development approach
 
-- Change `creatures.py` to:
-    - Implement the size and speed mutations.
-    - Use the `numpy.random` module.
-</v-click>
-
-::right::
-
-````md magic-move
-<<<@/snippets/structure.txt {*|8,10}{lines:false}
-<<<@/snippets/main_v3.py py {*}{lines:false}
-<<<@/snippets/creatures_v1.py py {*}{lines:false}
-````
+**Deliverables:**
+- **(Step 1)** — Completion of a **test overview table** in the testing documentation of the controller
+- **(Step 2)** — Fully documented unit tests in `tests/test_controller.py` following the AAA paradigm
+- **(Step 3)** — Completion of a **coverage overview table** in the testing documentation
 
 ---
-layout: two-cols-header
+layout: default
 ---
 
-## Question 2
-#### &nbsp;
-### Add two histogram plots showing the size and speed distributions.
+## Question 4: Thermal functionality extension
 
-::left::
-<!-- misschien een toevoegen met de gevraagde historgram? -->
-<div class="flex justify-center">
-  <img src="/images/histogram.png" alt="histogram" >
-</div>
+The provided code implements only the energy storage part of the battery model. Your task is to extend the system with the thermal dynamics of the battery.
 
-::right::
+**Tasks:**
+- Study the thermal model documentation — Understand the mathematical equations and physical relationships governing heat generation, dissipation, and temperature dynamics
+- Identify thermal constraints — Extract bounds, relationships, and invariants from the thermal model
 
-- When mutations take place, one wants to inspect how these are distributed and how these distributions change over the generations.
-- Histograms can be used to visualize these distributions.
+- Design the implementation:
+  - Choose whether to implement thermal functionality as a separate module or integrate it into existing modules
+  - Define classes, attributes, and methods needed for thermal dynamics
+  - Ensure all thermal constraints are respected
 
----
-layout: two-cols
----
-
-## Question 2 (cont'd)
-
-- Approach & tips:
-  - Study the `XY` class in `graphs.py` for inspiration.
-  - Develop a `Histogram` class which has the required functionality.
-  - Include the histograms in the graph cycler.
-
-<v-click at=2>
-
-- Requirements:
-    - The histograms should be updated every generation.
-    - The histograms should be available through the graph cycler.
-    - The histograms should work properly for both `default.toml` and `question1.toml`.
-    - All previously stated requirements should be met.
-</v-click>
-
-::right::
-
-````md magic-move {at:1}
-<<<@/snippets/graphs_v1.py {*}{lines:false}
-<<<@/snippets/graphs_v2.py {*}{lines:false}
-<<<@/snippets/main_v4.py {*}{lines:false}
-````
+- Develop comprehensive unit tests following the three-step test development approach
 
 ---
-layout: two-cols-header
+layout: default
 ---
 
-## Question 3
-#### &nbsp;
-### Implement a *sense* trait for the creature.
+## Question 4: Thermal functionality extension (cont'd)
 
-::left::
+The provided code implements only the energy storage part of the battery model. Your task is to extend the system with the thermal dynamics of the battery.
 
-- A creature can sense its surrounding in a (mutating) radius.
-- The creature responds to the sense:
-    - Goes directly to food.
-    - Runs away from too large creatures (predators).
-- The energy required to sense scales with the sensing radius.
-
-::right::
-
-<!-- misschien een toevoegen met de circles on the creatures heen? -->
-<div class="flex justify-center">
-  <img src="/images/sense.png" alt="sense" >
-</div>
-
----
-layout: two-cols
----
-
-## Question 3 (cont'd)
-
-- Approach:
-    - Implement the sense trait.
-    - Visualize the sense radius per creature in the simulation.
-    - Design a `question3.tolm` scenario that demonstrate the sense trait.
-    - Explain the reasoning behind your implementation in the report.
-
-::right::
-
-## &nbsp;
-
-- Requirements:
-    - Like the size and speed traits, the sense trait should be configurable through the `toml` scenario file.
-    - The `default.toml` and `question1.toml` scripts should not be altered and should continue to run.
-    - All previously stated requirements still hold.
+**Deliverables:**
+- **Updated Question 1:** Add thermal constraints to the battery model constraints table
+- **Updated Question 2:** Extend `battery.py` (or create new thermal module) with thermal functionality
+  - Updated test overview table
+  - New/updated tests in `tests/test_battery.py` (or `tests/test_thermal.py`) following AAA paradigm
+  - Updated coverage overview table
+- **Updated Question 3:** If the controller logic depends on or uses thermal data, update `controller.py` and its tests accordingly
 
 ---
 
 ## Submission instructions
 
-- The following deliverables are due on **Friday March 21, 2025, 18:00**:
-    - All **source code** must be developed in your team’s Gitlab repository. After the due date a snapshot of your repository will be taken. The latest push to the Gitlab repository main branch before the deadline will be assessed.
-    - Provide a short report discussing the reasoning behind your solutions to the questions. Include relevant code snippets and screenshots if needed. Indicate your names, student numbers, and team number on the report. The report must be uploaded on Canvas (in pdf-file format) no later than the due date.
-- Carefully read the Canvas rubric that accompanies the assignment.
+- The following deliverables are due on **Friday March 13, 2026, 18:00**:
+    - All **source code** and **documentation files** must be developed in your team’s Gitlab repository. After the due date a snapshot of your repository will be taken. The latest push to the Gitlab repository main branch before the deadline will be assessed.
+    - You can test the generation of the documentation and coverage reports locally (as instructed in the repository). Upon pushing your code to the Gitlab repository you can manually run the CI/CD pipeline to run the tests and generate documentation on the server.
+    - A pdf copy of your online documentation should be uploaded to Canvas (for reference)

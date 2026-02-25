@@ -63,6 +63,19 @@ layout: center
 class: red-background
 ---
 
+# Code testing
+
+---
+src: ./slides/testing.md
+---
+
+<!-- slides imported from testing.md -->
+
+---
+layout: center
+class: red-background
+---
+
 # Introduction to Assignment II
 
 ---
@@ -78,10 +91,3 @@ src: ./slides/questions.md
 ---
 
 <!-- slides imported from questions.md -->
-
----
-layout: center
-class: red-background
----
-
-# Branching in Git and Gitlab
