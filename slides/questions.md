@@ -7,7 +7,7 @@ layout: default
 You first perform the engineering model analysis for the battery and controller.
 
 **Tasks:**
-- Study the documentation of the battery model the controller model — Understand the mathematical equations and physical/logical relationships
+- Study the documentation of the battery model and the controller model — Understand the mathematical equations and physical/logical relationships
 - Identify constraints — From the equations and physical laws, extract bounds, relationships, logical rules, and invariants
 
 **Deliverables:**

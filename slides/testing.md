@@ -105,7 +105,7 @@ layout: default
 
 ## Automated module tests
 
-Automated module tests verify, for each module, whether each function, method, and class work as intended.
+Automated module tests verify, for each module, whether each function, method, and class works as intended.
 
 **Unit testing** builds on four core concepts:
 
