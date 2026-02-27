@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <img src="./images/tuelogo.png" alt="TU/e Logo" class="logo" />
+    <img src="./images/tuelogo.svg" alt="TU/e Logo" class="logo" />
   </footer>
   <div class="page-number">
     {{ $slidev.nav.currentPage }} / {{ $slidev.nav.total }}

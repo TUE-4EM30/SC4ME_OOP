@@ -100,4 +100,4 @@ The provided code implements only the energy storage part of the battery model. 
 - The following deliverables are due on **Friday March 13, 2026, 18:00**:
     - All **source code** and **documentation files** must be developed in your team’s Gitlab repository. After the due date a snapshot of your repository will be taken. The latest push to the Gitlab repository main branch before the deadline will be assessed.
     - You can test the generation of the documentation and coverage reports locally (as instructed in the repository). Upon pushing your code to the Gitlab repository you can manually run the CI/CD pipeline to run the tests and generate documentation on the server.
-    - A pdf copy of your online documentation should be uploaded to Canvas (for reference)
+    - A pdf copy of your online documentation should be uploaded to Canvas (for reference). See the `Quickstart` in the package documentation for detailed instructions.
