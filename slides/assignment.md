@@ -18,5 +18,5 @@ layout: default
 
 ![Home Battery](/images/home_battery.svg)
 
-- **Assignment:** You have received a functioning code that seems to give reasonable results. However, the code is currently written in a single script and is untested. It is your task to transform the code in a fully tested trustworthy software project.
-- The questions will help you make the steps to accomplish this. 
+- **Assignment:** You have received a functioning example code that seems to give reasonable results. However, the code is currently written in a single script (`examples/synthetic.py`) and is untested. It is your task to transform the code in a fully tested trustworthy software project.
+- The `forecast.py` module has already been implemented and serves as an example of how to develop your code.
